@@ -6,12 +6,15 @@ const deviceCheck = () => {
   const isiOS = /iphone|ipad|ipod/.test(
     window.navigator.userAgent.toLowerCase()
   );
+  const isChromeOrFF = /crios|fxios/.test(
+    window.navigator.userAgent.toLowerCase()
+  );
   const isiPadOS =
     navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
   const isStandalone =
     "standalone" in window.navigator && window.navigator.standalone;
 
-  return (isiOS || isiPadOS) && !isStandalone;
+  return (isiOS || isiPadOS) && !isStandalone && !isChromeOrFF;
 };
 
 export default ({
