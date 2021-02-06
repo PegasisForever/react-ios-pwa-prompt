@@ -48,7 +48,7 @@ const PWAPrompt = ({
 
     if (permanentlyHideOnDismiss) {
       localStorage.setItem(
-        "iosPwaPrompt",
+        "iosPwaPrompt2",
         JSON.stringify({
           ...promptData,
           visits: maxVisits,
